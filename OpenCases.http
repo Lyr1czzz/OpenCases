@@ -1,0 +1,6 @@
+@OpenCases_HostAddress = http://localhost:5057
+
+GET {{OpenCases_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
