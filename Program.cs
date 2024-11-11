@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using OpenCases.Data;
+
 namespace OpenCases
 {
     public class Program
@@ -14,6 +17,9 @@ namespace OpenCases
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -26,7 +32,6 @@ namespace OpenCases
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

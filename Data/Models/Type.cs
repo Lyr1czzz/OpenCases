@@ -2,7 +2,7 @@
 
 namespace OpenCases.Data.Models
 {
-    public class Weapon
+    public class Type
     {
         [Key]
         public Guid Id { get; set; }

@@ -11,6 +11,8 @@ namespace OpenCases.Data.Models
 
         public string? Name { get; set; }
 
+        public ICollection<Item>? Items { get; set; }
+
         public string? CloseImage { get; set; }
 
         public string? OpenImage { get; set; }
